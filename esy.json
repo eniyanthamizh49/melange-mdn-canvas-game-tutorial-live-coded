@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "esy": {
+    "buildsInSource": "_build"
+  },
+  "dependencies": {
+    "ocaml": "4.x",
+    "@opam/melange": "*",
+    "@opam/reason": "*",
+    "@opam/melange-webapi": "*",
+    "@opam/dune": "*"
+  },
+  "devDependencies": {
+    "@opam/ocaml-lsp-server": "*",
+    "@opam/ocamlformat": "*",
+    "@opam/ocamlformat-rpc": "*"
+  },
+  "resolutions": {
+    "@opam/ocamlfind": "opam:1.9.3"
+  }
+}

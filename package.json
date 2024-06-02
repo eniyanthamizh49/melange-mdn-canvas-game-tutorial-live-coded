@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build:watch": "dune build -w",
+    "bundle": "webpack --mode production ",
+    "serve": "webpack serve --no-open"
+  },
+  "dependencies": {
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}
