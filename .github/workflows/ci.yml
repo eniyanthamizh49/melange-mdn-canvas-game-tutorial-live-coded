@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, macos-11, windows-latest]
+    steps:
+      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: esy/github-action@208f825b87fd20cd0cec0343b0c6b5927a406d49
+        with:
+          setup-esy-npm-package: 'esy'
+          setup-esy-version: 'dev'
+          source-cache-key: 20240515-1
+          cache-key: ${{ hashFiles('esy.lock/index.json') }}-20240515-1
